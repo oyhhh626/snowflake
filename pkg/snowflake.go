@@ -14,6 +14,7 @@ func Init(startTime string, machineID int64) (err error) {
 	if err != nil {
 		return
 	}
+	// 设置起始时间，管用~69年
 	snowflake.Epoch = st.UnixNano() / 1000000
 	node, err = snowflake.NewNode(machineID)
 	return
